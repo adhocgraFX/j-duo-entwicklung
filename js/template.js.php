@@ -13,13 +13,13 @@ header($ExpStr);
 
 // load scripts
 require('classie.min.js');
-// bei JUG Fulda ausgeschalten
+// bei JUG Fulda ausschalten
 // require('responsiveslides.min.js');
 
 require('jquery.cookie.min.js');
 require('jquery.textresizer.min.js');
 
-// bei JUG Fulda ausgeschalten
+// bei JUG Fulda ausschalten
 // require('jquery.fs.boxer.min.js');
 
 ?>

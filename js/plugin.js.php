@@ -60,7 +60,7 @@ $textindent = $this->params->get('textindent');
         }
     }
 
-    // bei JUG Fulda ausgeschalten
+    // bei JUG Fulda ausschalten
     // responsive slideshow von viljamis
     /* <?php if ($this->countModules('slideshow')): ?>
     jQuery(window).load(function() {
@@ -161,7 +161,7 @@ $textindent = $this->params->get('textindent');
         }
     });
 
-    // bei JUG Fulda ausgeschalten
+    // bei JUG Fulda ausschalten
     // google analytics code asynchron + anonym
     /* <?php if ($analytics != "UA-XXXXX-X"): ?>
         var _gaq = _gaq || [];
@@ -196,7 +196,7 @@ $textindent = $this->params->get('textindent');
     });
     <?php endif; ?>
 
-    // bei JUG Fulda ausgeschalten
+    // bei JUG Fulda ausschalten
     // boxer
     /*  jQuery(document).ready(function() {
         jQuery(".boxer").not(".retina, .boxer_fixed, .boxer_top, .boxer_format, .boxer_mobile, .boxer_object").boxer();
