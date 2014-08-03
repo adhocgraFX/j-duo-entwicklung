@@ -11,8 +11,12 @@ body {
 	color: @body-copy-color;
 	background: @body-color;
 	font-family: @body-font, Helvetica, Arial, 'Droid Sans', sans-serif;
-	-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+    // Fix for webkit rendering
+    -webkit-font-smoothing: antialiased;
 	-webkit-text-size-adjust: 100%; /* Automatische Schriftvergrößerung in mobilen Webkit-Browsern vermeiden */
+    // text rendering
+    text-rendering: optimizeLegibility;
+    .font-feature-settings; // kern > siehe mixins
 }
 
 // Heading incl subheading classes
@@ -23,9 +27,6 @@ h1, h2, h3, h4, h5, h6 {
     color: @heading-color;
 	margin-top: @paragraph-val;
 	margin-bottom: @paragraph-val / 2;
-	// text rendering
-	text-rendering: optimizeLegibility;
-    .font-feature-settings;
 
 	a {
 		font-weight: inherit;
@@ -144,15 +145,12 @@ article {
 		// break-word : Indicates that normally unbreakable words may be broken at ...
 		// arbitrary points if there are no otherwise acceptable break points in the line.
 		.breakword;
-
-		// text rendering
-		text-rendering: optimizeLegibility;
-		.font-feature-settings; // kern siehe mixins
 	}
 }
 
 // TODO zur Diskussion: text indent nur in article
-
+// text indent nach j template css php verschoben, wg options
+/*
 article {
 	p {
 		& + p {
@@ -180,33 +178,74 @@ article {
 		}
 	}
 }
+*/
 
 //  Links
-//  TODO zur Diskussion: für article unterscheiden
-
 a {
-	line-height: inherit;
-	outline: 0;
-	text-decoration: none;
-	color: @link-color;
+    line-height: inherit;
+    outline: 0;
+    text-decoration: none;
+    color: @link-color;
 
-	&:hover{
-		color: @link-hover-color;
-		text-decoration: none;
-	}
+    &:hover{
+        color: @link-hover-color;
+    }
 
-	&:focus {
-		color: @link-focus-color;
-	}
+    &:focus {
+        color: @link-focus-color;
+    }
 
-	&:visited {
-		color: @link-visited-color;
-	}
+    &:visited {
+        color: @link-visited-color;
+    }
 
-	img {
-		outline: 0;
-	}
+    &:active {
+        color: @link-active-color;
+    }
+
+    img {
+        outline: 0;
+    }
 }
+
+//  TODO zur Diskussion: für article unterscheiden
+article {
+
+    p {
+
+        a {
+            line-height: inherit;
+            outline: 0;
+            text-decoration: none;
+            color: @link-color;
+            background: @clouds;
+
+            &:hover{
+                color: @link-hover-color;
+                background: @clouds-dark;
+            }
+
+            &:focus {
+                color: @link-focus-color;
+            }
+
+            &:visited {
+                color: @link-visited-color;
+            }
+
+            &:active {
+                color: @link-active-color;
+                background: @concrete;
+            }
+
+            img {
+                outline: 0;
+            }
+        }
+
+    }
+}
+
 
 // text formats
 em {

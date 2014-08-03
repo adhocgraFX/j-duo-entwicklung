@@ -8,6 +8,7 @@
 
 nav {
 	z-index: 10000;
+    font-weight: 300;
 
 	ul.nav   {
 		margin: 0;
@@ -27,7 +28,7 @@ nav {
 
 			a {
 				color: @concrete-dark;
-				display: block;
+                display: block;
 				padding: 1em;
 				border-bottom: 1px solid @gainsboro-light;
 
@@ -124,8 +125,8 @@ ul.nav {
 			display: inline-block;
 			zoom: 1;
 			*display: inline;
-			opacity: 0.90;
-			filter: Alpha(Opacity=90);
+			// opacity: 0.90;
+			// filter: Alpha(Opacity=90);
 
 			li {
 				float: left;
@@ -170,8 +171,17 @@ ul.nav {
 				width: 14em;
 
 				a {
+                    background: @clouds;
 					padding: 1em;
 					height: 3em;
+
+                    &:hover {
+                        background: @clouds-dark;
+                    }
+
+                    &:focus, &:active {
+                        background: @concrete;
+                    }
 				}
 			}
 		}

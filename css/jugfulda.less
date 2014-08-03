@@ -1,0 +1,352 @@
+// jugfulda styles > overrides
+
+// brand color je nach job
+@brand-color: @jugfuldablue-dark;
+// brand h1 font je nach job
+@brand-heading-font: 'fira sans';
+
+// joomla logo colors
+@joomla-green: 		#92db34;
+@joomla-blue: 		#748dc1;
+@joomla-orange: 	#edbd4a;
+@joomla-red: 		#cb3631;
+
+body {
+    background-color: @jugfuldablue-dark;
+
+    &#print {
+
+        h1 {
+            color: white;
+        }
+    }
+}
+
+header {
+
+    background: @jugfuldablue-dark;
+
+    .logo-text {
+
+        h1 {
+            font-family: @brand-heading-font, Helvetica, Arial, 'Droid Sans', sans-serif;
+            font-size: 1.25em;
+            margin: 0.65em 0;
+
+            span.j-blue {
+                color: @joomla-blue;
+            }
+
+            span.j-red {
+                color: @joomla-red;
+            }
+
+            span.j-orange {
+                color: @joomla-orange;
+            }
+
+            span.j-green {
+                color: @joomla-green;
+            }
+        }
+    }
+}
+
+.logo-image {
+    text-align: left;
+    margin-left: 1em;
+    border-bottom: 1px solid @jugfuldablue-darker;
+}
+
+footer {
+    background: @jugfuldablue-darker;
+}
+
+.link-pad, .textresizer-pad {
+    border-bottom: .5em solid @jugfuldablue;
+
+    ul  {
+
+        li {
+
+            a {
+                color: @jugfuldablue-dark;
+
+                &:hover {
+                    color: @whitesmoke;
+                    background: @jugfuldablue;
+                }
+
+                &:focus, &:active {
+                    color: @smoke;
+                    background: @jugfuldablue-dark;
+                }
+
+                &.textresizer-active {
+                    color: @jugfuldablue-dark;
+                    background: transparent;
+
+                    &:hover {
+                        color: @whitesmoke;
+                        background: @jugfuldablue;
+                    }
+
+                    &:focus, &:active {
+                        color: @smoke;
+                        background: @jugfuldablue-dark;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#showLeftPush, #showRightPush {
+    background-color: @jugfuldablue-dark;
+    color: @smoke;
+
+    &:hover {
+        background-color: @jugfuldablue;
+    }
+
+    &.active, &:active {
+        background-color: @jugfuldablue-darker;
+        color: @whitesmoke;
+    }
+}
+
+// module chrome for menu style
+.menu-style {
+
+    .module-body {
+
+        ul {
+
+            li {
+
+                &.active {
+                    background: @clouds !important;
+                }
+
+                a {
+                    color: @concrete-dark;
+
+                    &:hover {
+                        color: @whitesmoke;
+                        background: @jugfuldablue !important;
+                    }
+
+                    &:focus, &:active {
+                        color: @smoke;
+                        background: @jugfuldablue-dark !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .accordion-inner ul {
+        background: @clouds;
+    }
+
+    a.accordion-toggle {
+        color: @jugfuldablue-dark !important;
+
+        &:hover {
+            color: @whitesmoke;
+            background: @jugfuldablue !important;
+        }
+
+        &:focus, &:active, .active {
+            color: @smoke !important;
+            background: @jugfuldablue-dark !important;
+        }
+    }
+}
+
+nav {
+    background: @jugfuldablue-dark;
+
+    ul.nav   {
+
+        li {
+
+            a {
+                color: @whitesmoke;
+                border-bottom: 1px solid @jugfuldablue-darker;
+
+                &:hover {
+                    color: @smoke;
+                    background: @jugfuldablue;
+                }
+
+                &:focus, &:active {
+                    color: @smoke;
+                    background: @jugfuldablue-darker;
+                }
+            }
+        }
+    }
+}
+
+// media queries // 48 x 16 = 768
+@media screen and (min-width: 48em) {
+
+    body {
+        background: @white;
+    }
+
+    header {
+        height: 6em;
+
+        .logo-text {
+            overflow: inherit;
+            width: 12em;
+            margin: 0 auto;
+            height: 6em;
+
+            h1 {
+                font-size: 2.5em;
+                line-height: .8;
+
+                small {
+                    font-size: 50%;
+                }
+            }
+        }
+    }
+
+    .logo-image {
+        border-bottom: 0;
+        position: absolute;
+        left: 0;
+        top: -1em;
+        width: 12em;
+        height: 5em;
+
+
+        a {
+            height: 5em;
+            margin: 0;
+        }
+    }
+
+    nav {
+
+        ul.nav  {
+
+            li {
+                float: left;
+
+                &.current, &.active {
+                    border-bottom: 0;
+                }
+
+                &:nth-child(1) a::before {
+                    content: "\f015";
+                }
+
+                &:nth-child(2) a::before {
+                    content: "\f05a";
+                }
+
+                &:nth-child(3) a::before {
+                    content: "\f073";
+                }
+
+                &:nth-child(4) a::before {
+                    content: "\f003";
+                }
+
+                a {
+                    background: @jugfuldablue-dark;
+                    border-bottom: 0;
+
+                    &::before {
+                        font-family: FontAwesome;
+                        line-height: 1;
+                        display: inline-block;
+                        text-decoration: inherit;
+                        padding-right: .5em;
+                        content: "";
+                    }
+                }
+            }
+        }
+
+        ul.nav li:hover ul.nav-child {
+            background: @smoke;
+            border: 1px solid @concrete;
+
+            li {
+
+                a {
+                    background: @jugfuldablue;
+                    border-bottom: 1px solid @jugfuldablue-darker;
+
+                    &:hover {
+                        background: @jugfuldablue-dark;
+                    }
+
+                    &:focus, &:active {
+                        background: @jugfuldablue-darker;
+                    }
+
+                    &::before {
+                        padding-right: 0;
+                        content: "";
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 60em)  {
+
+    .logo-image {
+        border-bottom: 0;
+        position: absolute;
+        left: 0;
+        top: -4em;
+        width: 12em;
+        height: 8em;
+
+
+        a {
+            height: 8em;
+            margin: 0;
+        }
+    }
+
+}
+
+@media screen and (min-width: 80em) {
+
+    header {
+        height: 8em;
+
+        .logo-text {
+            height: 8em;
+
+            h1 {
+                font-size: 3em;
+            }
+        }
+    }
+
+    .logo-image {
+        border-bottom: 0;
+        position: absolute;
+        left: 0;
+        top: -6em;
+        width: 12em;
+        height: 10em;
+
+
+        a {
+            height: 10em;
+            margin: 0;
+        }
+    }
+}

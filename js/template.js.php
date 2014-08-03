@@ -13,12 +13,13 @@ header($ExpStr);
 
 // load scripts
 require('classie.min.js');
-require('responsiveslides.min.js');
+// bei JUG Fulda ausgeschalten
+// require('responsiveslides.min.js');
 
 require('jquery.cookie.min.js');
 require('jquery.textresizer.min.js');
 
-// boxer js experiment
+// bei JUG Fulda ausgeschalten
 // require('jquery.fs.boxer.min.js');
 
 ?>

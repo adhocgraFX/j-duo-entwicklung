@@ -137,6 +137,32 @@
             </fieldset>
 
             <fieldset name="advanced">
+                <field name="Jug Fulda"
+                       type="spacer"
+                       hr="false" >
+                </field>
+                <field name="jugfulda"
+                       type="radio"
+                       default="0"
+                       label="JUG Fulda Title"
+                       description="JUG Fulda Title">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+                <field name="Text indent Paragraph"
+                       type="spacer"
+                       hr="false" >
+                </field>
+                <field name="textindent"
+                       type="radio"
+                       default="1"
+                       label="Text indent Paragraph"
+                       description="Text indent Paragraph">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
                 <field name="Google Analytics"
                        type="spacer"
                        hr="false" >

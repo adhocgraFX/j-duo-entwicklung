@@ -2,6 +2,7 @@
 // get template params
 $analytics = $this->params->get('analytics');
 $textresizer = $this->params->get('textresizer');
+$textindent = $this->params->get('textindent');
 
 ?>
 
@@ -59,8 +60,9 @@ $textresizer = $this->params->get('textresizer');
         }
     }
 
+    // bei JUG Fulda ausgeschalten
     // responsive slideshow von viljamis
-    <?php if ($this->countModules('slideshow')): ?>
+    /* <?php if ($this->countModules('slideshow')): ?>
     jQuery(window).load(function() {
         jQuery("#slider").responsiveSlides({
             auto: true,
@@ -72,8 +74,10 @@ $textresizer = $this->params->get('textresizer');
         });
     });
     <?php endif; ?>
+    */
 
     // text-indent, Ausnahmen Erstzeileneinzug
+    <?php if ($textindent == 1): ?>
     jQuery(window).load( function() {
         var $paragraph = jQuery("p");
         // Absatz mit Bild
@@ -94,6 +98,7 @@ $textresizer = $this->params->get('textresizer');
             "text-indent": "0px"
         });
     });
+    <?php endif; ?>
 
     // go to top
     jQuery(window).load(function() {
@@ -156,8 +161,9 @@ $textresizer = $this->params->get('textresizer');
         }
     });
 
-    //  google analytics code asynchron + anonym
-    <?php if ($analytics != "UA-XXXXX-X"): ?>
+    // bei JUG Fulda ausgeschalten
+    // google analytics code asynchron + anonym
+    /* <?php if ($analytics != "UA-XXXXX-X"): ?>
         var _gaq = _gaq || [];
         _gaq.push(['_setAccount', '<?php echo htmlspecialchars($analytics); ?>']);
         _gaq.push(['_gat._anonymizeIp']);
@@ -169,13 +175,14 @@ $textresizer = $this->params->get('textresizer');
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
         })();
     <?php endif; ?>
+    */
 
     //  text resizer
     <?php if ($textresizer == 1): ?>
     jQuery(document).ready( function() {
-        jQuery( "#textsizer-embed a" ).textresizer({
-            target: ".main",
-            type: "css",
+        jQuery(' #textsizer-embed a ').textresizer({
+            target: '.main',
+            type: 'css',
             sizes: [
                 // Small. Index 0
                 { "font-size" : "87.5%" },
@@ -189,6 +196,7 @@ $textresizer = $this->params->get('textresizer');
     });
     <?php endif; ?>
 
+    // bei JUG Fulda ausgeschalten
     // boxer
     /*  jQuery(document).ready(function() {
         jQuery(".boxer").not(".retina, .boxer_fixed, .boxer_top, .boxer_format, .boxer_mobile, .boxer_object").boxer();

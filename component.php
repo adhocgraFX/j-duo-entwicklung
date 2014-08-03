@@ -1,11 +1,9 @@
 <?php defined( '_JEXEC' ) or die; 
 
 // variables
-$doc = JFactory::getDocument(); 
+$doc = JFactory::getDocument();
+$app = JFactory::getApplication();
 $tpath = $this->baseurl.'/templates/'.$this->template;
-
-// get template params
-$title = $this->params->get('title');
 
 // generator tag
 $this->setGenerator(null);
@@ -29,7 +27,7 @@ $doc->addStyleSheet($tpath.'/css/j-template.css');
 
 <header>
     <div class="logo-text">
-        <h1><?php echo htmlspecialchars($title); ?></h1>
+        <h1><?php echo htmlspecialchars($app->getCfg('sitename')); ?></h1>
     </div>
 </header>
 <div class="main">
@@ -37,7 +35,7 @@ $doc->addStyleSheet($tpath.'/css/j-template.css');
     <jdoc:include type="component" />
 </div>
 <footer>
-    <p style="color:white">JDuo | 2014 | adhocgraFX | &copy; | alle Rechte vorbehalten</p>
+    <p style="color:white"><?php echo htmlspecialchars($app->getCfg('sitename')); ?> | 2014 | &copy; | alle Rechte vorbehalten</p>
 </footer>
 
 </body>

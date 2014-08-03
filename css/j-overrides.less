@@ -93,13 +93,38 @@ p.readmore, a.readmore {
 		padding-left: .5em;
 	}
 }
+
+// mit overrides für j-comments
+a.comments-link {
+    background-image: none !important;
+    margin-bottom: .5em;
+}
+
+a.comments-link {
+
+    &:before {
+        font-family: FontAwesome;
+        font-weight: normal;
+        font-style: normal;
+        display: inline-block;
+        text-decoration: inherit;
+        padding-right: 1em;
+        content: "\f0e6";
+    }
+}
+
+.jcomments-links {
+    display: inline-block;
+}
+
 // flat allg stil
 .flat {
 	float: right !important;
 	margin: 0 0 .2em 0 !important;
 }
 
-a.flat, a.readmore {
+// mit j-comments
+a.flat, a.readmore, a.comments-link {
 	color: @concrete-darker;
 	background: @gainsboro-light;
 	.border-radius(@baseBorderRadius);
@@ -485,17 +510,95 @@ ul.nav {
 	padding: 0;
 }
 
-form {
-    max-width: 100% !important;
-    margin: 0 0 .75em 0;
+// edit form
+div.edit.item-page {
 
-    fieldset {
+    form {
+        width: 100%;
         max-width: 100% !important;
         margin: 0 0 .75em 0;
-        padding: 1em;
 
-        input {
+        fieldset {
+            width: 100%;
+            max-width: 100% !important;
+            margin: .5em 0;
+            padding: 1em;
+
+            input {
+                width: 100%;
+                max-width: 100% !important;
+            }
+
+            .tab-content {
+                min-height: 6em;
+                // overflow: hidden;
+            }
+
+            div.controls {
+                display: block;
+                width: 100%;
+                min-height: 2em;
+            }
+        }
+
+        textarea {
+            width: 100%;
             max-width: 100% !important;
         }
     }
+
+    a.btn {
+        font-size: .75em;
+        min-width: 9em;
+    }
+
+    .btn {
+        font-size: .75em;
+        padding: .5em;
+    }
 }
+
+.chzn-container {
+    min-width: 12em;
+
+    .chzn-drop {
+        min-width: 12em;
+        width: 100%;
+    }
+
+
+}
+
+.chzn-container-single .chzn-single {
+    min-width: 12em;
+    width: 100%
+}
+
+
+.chzn-container-multi .chzn-choices li.search-field input[type="text"] {
+    min-height: 2em;
+    min-width: 12em;
+}
+
+// jmod edit override
+.jmodedit {
+    padding: 0;
+    top: 0;
+    background: transparent !important;
+}
+
+.btn-toolbar {
+    display: block;
+    width: 100%;
+    min-height: 2em;
+    margin-bottom: 1em;
+
+    .btn-group {
+        float: left;
+
+        .btn {
+            margin: 0 .5em 0 0;
+        }
+    }
+}
+

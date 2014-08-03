@@ -3,8 +3,7 @@
 // Module chrome joomskeleton
 .module {
 	background: @white;
-	border: 1px solid @gainsboro; // @jugfuldablue-darker;
-	display: block;
+    display: block;
 	font-size: 1em;
 
 	a:hover, a:active {
@@ -18,6 +17,8 @@
 		overflow: hidden;
 		height: auto;
 		color: @gray-dark;
+        border-left: 1px solid @gainsboro;
+        border-right: 1px solid @gainsboro;
 
 		div {
 			width: 100%;
@@ -46,7 +47,7 @@
 			color: @smoke;
 			font-size: 1.25em;
 			line-height: 1.4;
-			font-weight: 400;
+			font-weight: 300;
 			padding: 0;
 			margin: 0;
 		}
@@ -55,12 +56,12 @@
 
 // search
 .module {
-
-	&.search {
+    &.search {
 
 		.module-body {
 			padding: 0;
             background: @whitesmoke;
+            border: 0; // reset border
 
             form {
 				margin: 0;
@@ -71,7 +72,7 @@
 					margin: 0;
 					border: 0; // reset border
 					color: @concrete-dark; // @jugfuldablue-light;
-					background: transparent; // @jugfuldablue-darker;
+					background: @whitesmoke; // @jugfuldablue-darker;
 
 					&:focus {
 						color: @concrete-darker; // @jugfuldablue-darker;
@@ -83,14 +84,54 @@
 	}
 }
 
+// JUG Fulda styles
+.module {
+
+    // search JUG Fulda
+    &.search-jugfulda {
+
+        .module-body {
+            padding: 0;
+            border: 0;
+
+            form {
+                margin: 0;
+
+                input {
+                    width: 100%;
+                    height: 3em;
+                    margin: 0;
+                    // border: 0;
+                    color: @jugfuldablue-dark;
+                    background: @whitesmoke;
+
+                    &:focus {
+                        color: @smoke;
+                        background: @jugfuldablue;
+                    }
+                }
+            }
+        }
+    }
+
+    // JUG Fulda blue
+    &.jugfulda {
+        border-bottom: .5em solid @jugfuldablue;
+
+        .module-title {
+            background: @jugfuldablue-dark;
+        }
+    }
+}
+
 // module-body dark-body für dunkle hintergründe
 .module {
 	&.dark-body {
 		background: @gray-dark !important;
-		border: 1px solid @black;
 
 		.module-body {
 			color: @smoke !important;
+            border: 0 !important;
 		}
 	}
 }
@@ -118,15 +159,6 @@
             background: @brand-color;
         }
     }
-
-	// JUG Fulda blue
-	&.jugfulda {
-		border-bottom: .5em solid @jugfuldablue;
-
-		.module-title {
-			background: @jugfuldablue-dark;
-		}
-	}
 
 	// Grautöne
 	&.white {

@@ -1,11 +1,8 @@
 // Images - img skalierbar machen
 
-img, img.scale-with-grid {
-	max-width: 100%;
-	height: auto;
-	}
-
-img {
+img, figure {
+    max-width: 100%;
+    height: auto;
 
 	&.scale-with-grid {
 		max-width: 100%;
@@ -26,6 +23,25 @@ img {
 	&.two-thirds-image {
 		width: 66%;
 	}
+
+    // floats
+    .left-image {
+        float: left;
+        display: inline;
+        margin-right: 1em;
+    }
+
+    .right-image {
+        float: right;
+        display: inline;
+        margin-left: 1em;
+    }
+
+    .center-image {
+        display: block;
+        text-align: center;
+        margin: 1em auto;
+    }
 }
 
 // figure and figcaption (caption js)

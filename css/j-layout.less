@@ -2,8 +2,8 @@
 
 header {
 	// .order(1);
-	height: 3em;
-	background: @whitesmoke; // @jugfuldablue-dark;
+	// height: 3em;
+	background: @whitesmoke;
 
 	.logo-text {
 		overflow: hidden;
@@ -17,6 +17,7 @@ header {
 		h1 {
 			text-align: center;
 			font-weight: 300;
+            font-family: @brand-heading-font, Helvetica, Arial, 'Droid Sans', sans-serif;
 			font-size: 1.5em;
 			color: @brand-color;
 			padding: 0;
@@ -29,19 +30,20 @@ header {
 	overflow: hidden;
 	text-align: center;
 	height: 3em;
+    z-index: -1;
 
 	a {
 		width: 100%;
 		height: 3em;
 		display: block;
 		padding: 0;
-		z-index: -1;
+		// z-index: -1;
 
 		img {
 			height: 100%;
 			width: auto;
 			position: relative;
-			z-index: -1;
+			// z-index: -1;
 		}
 	}
 }
@@ -54,7 +56,8 @@ header {
 .link-pad, .textresizer-pad {
 	text-align: center;
 	height: 3.5em;
-	border: 1px solid @gainsboro;
+	border-left: 1px solid @gainsboro;
+    border-right: 1px solid @gainsboro;
 	border-bottom: .5em solid @gainsboro-dark;
 
 	ul  {
@@ -148,17 +151,17 @@ footer, nav, aside, .main {
 }
 
 footer, section.top, section.bottom {
-	// .flexbox;
-	// .flex-flow(row wrap);
-	// .justify-content(center);
-	// .align-items(stretch);
-	// .align-content(space-around);
+	.flexbox;
+	.flex-flow(row wrap);
+	.justify-content(center);
+	.align-items(stretch);
+	.align-content(space-around);
 
 	.module {
-		// .flex(1);
+		.flex(1);
 		min-width: 14em;
 		max-width: 58em;
-		margin: 1em auto;
+		margin: 1em;
 	}
 }
 
@@ -166,7 +169,7 @@ footer, section.top, section.bottom {
 @media screen and (min-width: 48em){
 
 	.wrapper-push {
-		// max-width: 58em;
+		// max-width: 58em; > j-template css php
 		// .order(5);
 	}
 
@@ -210,11 +213,18 @@ footer, section.top, section.bottom {
 	}
 
 	section.top, section.bottom, section.wrapper-push, footer, header, nav {
-	    opacity: 0.90;
-	    filter: Alpha(Opacity=90);
+	    // opacity: 0.90;
+	    // filter: Alpha(Opacity=90);
     }
 }
 
 @media screen and (min-width: 80em){
+    .logo-image {
+        height: 10em;
 
+        a {
+            height: 8em;
+            margin: 1em 0;
+        }
+    }
 }

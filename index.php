@@ -23,9 +23,10 @@ $logo = $this->params->get('logo');
 $logotitle = $this->params->get('logotitle');
 $textresizer = $this->params->get('textresizer');
 $linkpad = $this->params->get('linkpad');
+$jugfulda = $this->params->get('jugfulda');
 
 // Add Joomla! JavaScript Frameworks
-JHtml::_('bootstrap.framework');
+// JHtml::_('bootstrap.framework');
 
 // Add current user information
 $user = JFactory::getUser();
@@ -88,13 +89,8 @@ $doc->addScript($tpath.'/js/modernizr-2.8.2.min.js');
     <!-- brick fonts -->
     <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Fira+Sans:300,300i,400,400i,500,500i,700,700i">
 
-    <!--
-    <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Lato:300,300i,400,400i,500,500i,700,700i">
-    -->
-
-    <!-- fontAwesome
+    <!-- fontAwesome -->
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
-    -->
 
     <!-- google fonts
     <link href='http://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,700,300italic,400italic,500italic,700italic' rel='stylesheet' type='text/css'>
@@ -104,7 +100,7 @@ $doc->addScript($tpath.'/js/modernizr-2.8.2.min.js');
     <script src="//use.edgefonts.net/lato:n3,i3,n4,i4,n7,i7.js"></script>
     -->
 
-    <!-- typekit fonts .. nach oben
+    <!-- typekit fonts ... nach oben ...
     <script type="text/javascript" src="//use.typekit.net/xxxxxxx.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     -->
@@ -119,7 +115,15 @@ $doc->addScript($tpath.'/js/modernizr-2.8.2.min.js');
         <button id="showLeftPush"></button>
         <div class="logo-text">
             <a href="<?php echo $this->baseurl ?>">
-                <h1><?php echo htmlspecialchars($title); ?></h1>
+                <?php if ($jugfulda == 1): ?>
+                    <h1>Joomla!<sup>&reg;</sup><small><span class="j-green"> User</span><span class="j-orange"> Group</span><span class="j-red"> Fulda</span></small></h1>
+                <?php else: ?>
+                    <?php if ($title != 'Site Title'): ?>
+                        <h1><?php echo htmlspecialchars($title); ?></h1>
+                    <?php else: ?>
+                        <h1><?php echo htmlspecialchars($app->getCfg('sitename')); ?></h1>
+                    <?php endif; ?>
+                <?php endif; ?>
             </a>
         </div>
         <button id="showRightPush"></button>
@@ -168,10 +172,6 @@ $doc->addScript($tpath.'/js/modernizr-2.8.2.min.js');
                 <?php endif; ?>
             </div>
 
-            <?php if ($this->countModules('sidebar')): ?>
-                <jdoc:include type="modules" name="sidebar" style="jduo"  />
-            <?php endif; ?>
-
             <?php if ($textresizer == 1): ?>
                 <div class="textresizer-pad">
                     <ul class="textresizer" id="textsizer-embed">
@@ -182,13 +182,16 @@ $doc->addScript($tpath.'/js/modernizr-2.8.2.min.js');
                 </div>
             <?php endif; ?>
 
+            <?php if ($this->countModules('sidebar')): ?>
+                <jdoc:include type="modules" name="sidebar" style="jduo"  />
+            <?php endif; ?>
+
             <?php if ($linkpad == 1): ?>
                 <div class="link-pad">
                     <ul>
-                        <li><a href="https://plus.google.com/" target="_blank" title="google plus"><span class="icon-google-plus-square"></span><p hidden>google plus</p></a></li>
-                        <li><a href="https://twitter.com/" target="_blank" title="twitter"><span class="icon-twitter"></span><p hidden>twitter</p></a></li>
-                        <li><a href="https://github.com/" target="_blank" title="github"><span class="icon-github"></span><p hidden>github</p></a></li>
-                        <li><a href="#" target="_blank" title="external link"><span class="icon-external-link"></span><p hidden>external link</p></a></li>
+                        <li><a href="https://www.facebook.com/jugfulda/" target="_blank" title="Joomla! User Group Fulda bei facebook"><span class="icon-facebook-sign"></span><p hidden>facebook</p></a></li>
+                        <li><a href="https://www.flickr.com/photos/jugfulda/" target="_blank" title="Joomla! User Group Fulda bei flickr"><span class="icon-flickr"></span><p hidden>flickr</p></a></li>
+                        <li><a href="https://twitter.com/jugfulda/" target="_blank" title="Folge uns auf twitter"><span class="icon-twitter"></span><p hidden>twitter</p></a></li>
                     </ul>
                 </div>
             <?php endif; ?>
