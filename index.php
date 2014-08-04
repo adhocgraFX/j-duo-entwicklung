@@ -75,10 +75,10 @@ $doc->addScript($tpath.'/js/modernizr-2.8.2.min.js');
     </script>
 
     <link rel="shortcut icon" href="<?php echo $tpath; ?>/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" href="<?php echo $tpath; ?>/images/apple-touch-icon-57x57-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo $tpath; ?>/images/apple-touch-icon-72x72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo $tpath; ?>/images/apple-touch-icon-114x114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo $tpath; ?>/images/apple-touch-icon-144x144-precomposed.png">
+    <link rel="apple-touch-icon" href="<?php echo $tpath; ?>/images/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="<?php echo $tpath; ?>/images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="<?php echo $tpath; ?>/images/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="<?php echo $tpath; ?>/images/apple-touch-icon-ipad-144.png" />
     <!-- Win8 tile 144x144 -->
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="<?php echo $tpath; ?>/images/tile-icon.png">
@@ -89,8 +89,9 @@ $doc->addScript($tpath.'/js/modernizr-2.8.2.min.js');
     <!-- brick fonts -->
     <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Fira+Sans:300,300i,400,400i,500,500i,700,700i">
 
-    <!-- fontAwesome - alternativ: kleine Auswahl laden, siehe j template less -->
+    <!-- fontAwesome - alternativ: kleine Auswahl laden, siehe j template less
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    -->
 
     <!-- google fonts
     <link href='http://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,700,300italic,400italic,500italic,700italic' rel='stylesheet' type='text/css'>
@@ -191,6 +192,9 @@ $doc->addScript($tpath.'/js/modernizr-2.8.2.min.js');
                     <ul>
                         <li><a href="https://www.facebook.com/jugfulda/" target="_blank" title="Joomla! User Group Fulda bei facebook"><span class="icon-facebook-sign"></span><p hidden>facebook</p></a></li>
                         <li><a href="https://www.flickr.com/photos/jugfulda/" target="_blank" title="Joomla! User Group Fulda bei flickr"><span class="icon-flickr"></span><p hidden>flickr</p></a></li>
+                        <!--
+                        <li><a href="href="?format=feed&amp;type=rss"" target="_blank" title="Abonniere die RSS Feeds der JUG Fulda"><span class="icon-rss"></span><p hidden>rss</p></a></li>
+                        -->
                         <li><a href="https://twitter.com/jugfulda/" target="_blank" title="Folge uns auf twitter"><span class="icon-twitter"></span><p hidden>twitter</p></a></li>
                     </ul>
                 </div>

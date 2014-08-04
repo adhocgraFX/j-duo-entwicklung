@@ -88,6 +88,7 @@ dl.article-info {
 p.readmore, a.readmore {
 	text-align: right;
 	display: block;
+    min-height: 2em;
 
 	span {
 		padding-left: .5em;
@@ -95,9 +96,9 @@ p.readmore, a.readmore {
 }
 
 // mit overrides für j-comments
-a.comments-link {
+a.comments-link, a.readmore-link {
     background-image: none !important;
-    margin-bottom: .5em;
+    margin: 0 1em 1em 0;
 }
 
 a.comments-link {
@@ -124,7 +125,7 @@ a.comments-link {
 }
 
 // mit j-comments
-a.flat, a.readmore, a.comments-link {
+a.flat, a.readmore, a.comments-link, a.readmore-link {
 	color: @concrete-darker;
 	background: @gainsboro-light;
 	.border-radius(@baseBorderRadius);
@@ -201,22 +202,26 @@ p.counter {
 	display: block;
 	color: @gray-darker;
 	padding: 1.25em 0;
+    min-width: 6em;
+    text-align: right;
 }
 
 
-
 // items general + blog stuff
+
+article {
+    border-bottom: .5em solif @gainsboro;
+    padding: 1em 0;
+    margin: 1em 0;
+}
+
 .item {
-	padding: 1em 0;
 	display: block;
 }
 
 .item-page, .blog, .blog-featured {
 	display: block;
 	overflow: hidden;
-	padding: 0;
-	margin: 1em 0;
-	background: transparent;
 
 	> h2 {
 		margin-top: 0;
@@ -226,7 +231,6 @@ p.counter {
 .items-leading {
 	display: block;
 	overflow: hidden;
-	margin-bottom: 1em;
 }
 
 .leading-0, .leading-1, .leading-2, .leading-4, .leading-5, .leading-6 {
@@ -236,8 +240,7 @@ p.counter {
 
 .item-separator {
 	display: block;
-	overflow: hidden;
-	height: 1em;
+	height: 1px; // ha!
 }
 
 .page-header, .subheading-category {

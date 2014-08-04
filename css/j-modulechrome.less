@@ -127,11 +127,16 @@
 // module-body dark-body für dunkle hintergründe
 .module {
 	&.dark-body {
-		background: @gray-dark !important;
+		background: @jugfuldablue-darker !important;
 
 		.module-body {
 			color: @smoke !important;
             border: 0 !important;
+
+            a {
+                color: @smoke !important;
+                background: @jugfuldablue;
+            }
 		}
 	}
 }
@@ -255,8 +260,11 @@
 .module {
 	&.transparent {
 		background: transparent;
-		border: 0 !important;
 		color: inherit !important;
+
+        .module-body {
+            border: 0 !important;
+        }
 
 		.module-title {
 			background: transparent;
@@ -276,6 +284,7 @@
 
 		ul {
 			margin: 0 !important;
+            backgound: @white;
 
 			li {
 				margin: 0 !important;
