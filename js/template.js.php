@@ -22,4 +22,7 @@ require('jquery.textresizer.min.js');
 // bei JUG Fulda ausschalten
 // require('jquery.fs.boxer.min.js');
 
+// für JUG Fulda bottom row
+require('jquery.syncHeight.min.js');
+
 ?>

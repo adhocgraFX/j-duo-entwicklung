@@ -55,12 +55,16 @@
 	word-wrap: auto;
 }
 
+// Kerning und Ligatures
+// schnelles mixin
 .font-feature-settings {
-    // Accepted values: [ kern |...  |...  ]
-    font-feature-settings: "kern";
-    -webkit-font-feature-settings: "kern";
-    -moz-font-feature-settings: "kern";
-    -moz-font-feature-settings: "kern=1";
+    // Values: [ kern | liga  | dlig  ]
+    -moz-font-feature-settings: "kern=1", "liga=1", "dlig=1";
+    -moz-font-feature-settings: "kern", "liga", "dlig";
+    -ms-font-feature-settings: "kern", "liga", "dlig";
+    -webkit-font-feature-settings: "kern", "liga", "dlig";
+    -o-font-feature-settings: "kern", "liga", "dlig";
+    font-feature-settings: "kern", "liga", "dlig";
 }
 
 

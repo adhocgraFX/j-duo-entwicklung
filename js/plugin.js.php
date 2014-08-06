@@ -234,4 +234,17 @@ $textindent = $this->params->get('textindent');
 
     }); */
 
+    // sync Height für bottom row JUG Fulda
+    <?php if ($this->countModules('bottom_row')): ?>
+    //  für gleiche modulhöhen - nun mit window load
+    jQuery(window).load(function(){
+        jQuery('.equal .module-body').syncHeight({ 'updateOnResize': true});
+        jQuery(window).resize(function(){
+            if(jQuery(window).width() < 760){
+                jQuery('.equal .module-body').unSyncHeight();
+            }
+        });
+    });
+    <?php endif; ?>
+
 </script>

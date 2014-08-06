@@ -193,11 +193,20 @@ nav {
     }
 }
 
+.module {
+
+    &.width-25,
+    &.width-33,
+    &.width-50 {
+        .make-block;
+    }
+}
+
 // media queries // 48 x 16 = 768
 @media screen and (min-width: 48em) {
 
     body {
-        background: @smoke;
+        background: @smoke-darker;
     }
 
     header {
@@ -302,6 +311,24 @@ nav {
                     }
                 }
             }
+        }
+    }
+
+    .module {
+
+        &.width-25 {
+            width: 23.75%;
+            margin: 1%;
+        }
+
+        &.width-33 {
+            width: 31.3333%;
+            margin: 1%;
+        }
+
+        &.width-50 {
+            width: 48.5%;
+            margin: 1%;
         }
     }
 }
