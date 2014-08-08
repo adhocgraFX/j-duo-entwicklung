@@ -25,8 +25,8 @@ $textresizer = $this->params->get('textresizer');
 $linkpad = $this->params->get('linkpad');
 $jugfulda = $this->params->get('jugfulda');
 
-// Add Joomla! JavaScript Frameworks
-// JHtml::_('bootstrap.framework');
+// Add Joomla! JavaScript Frameworks todo wie kann man das besser kontrollieren??
+JHtml::_('bootstrap.framework');
 
 // Add current user information
 $user = JFactory::getUser();
@@ -50,7 +50,7 @@ $doc->addScript($tpath.'/js/modernizr-2.8.2.min.js');
 
     <jdoc:include type="head" />
 
-    <!-- html5 mobile boilerplate meta tags todo sollen die noch dazu??
+    <!-- html5 mobile boilerplate meta tags todo sollten die noch dazu??
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320"/>
     <meta http-equiv="cleartype" content="on">
