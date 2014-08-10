@@ -93,7 +93,7 @@ $doc->addScript($tpath.'/js/modernizr-2.8.2.min.js');
     <?php include_once ('css/j-template.css.php'); ?>
 
     <!-- brick fonts -->
-    <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Fira+Sans:300,300i,400,400i,500,500i,700,700i">
+    <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Fira+Sans:300,300i,400,400i,500,500i">
 
     <!-- fontAwesome - alternativ: kleine Auswahl laden, siehe j template less
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">

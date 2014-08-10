@@ -13,6 +13,7 @@ header($ExpStr);
 
 // load scripts
 require('classie.min.js');
+
 // bei JUG Fulda ausschalten
 // require('responsiveslides.min.js');
 
