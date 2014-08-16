@@ -1,9 +1,14 @@
 // pagination override
-.pagination ul > li > a,
-.pagination ul > li > span {
-	font-size: .875em;
-	padding: .5em 1em;
-	line-height: @baseLineHeight;
+.pagination ul {
+    padding-left: 0;
+    margin-left: 0;
+
+    li > a,
+    li > span {
+        font-size: .875em;
+        padding: .5em 1em;
+        line-height: @baseLineHeight;
+    }
 }
 
 // search results
@@ -509,7 +514,11 @@ ul.actions {
 	}
 }
 
-ul.nav {
+// todo etwas unsicher, da nicht genauer angegeben
+// ul nav ?
+// ol nav für nav tabs
+ul.nav,
+ol.nav.nav-tabs.nav-stacked {
 	padding: 0;
 }
 

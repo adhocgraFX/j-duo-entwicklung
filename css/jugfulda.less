@@ -11,6 +11,10 @@
 @joomla-orange: 	#F7B133;
 @joomla-red: 		#E73029;
 
+// @line-height:        1.4; an fira anpassen!
+@line-height-medium:    1.45;
+@line-height-large:     1.5;
+
 body {
     background-color: @jugfuldablue-dark;
 
@@ -23,13 +27,28 @@ body {
 }
 
 article {
+
+    p.lead {
+        color: @jugfuldablue-dark !important;
+        font-weight: 400 !important;
+    }
+
     h1, h2, h3, h4, h5, h6 {
         font-weight: @medium !important;
 
         a {
             color: @jugfuldablue-dark !important;
         }
+    }
 
+    .alert-info {
+        color: @jugfuldablue-dark;
+        background-color: @clouds;
+        border-color: @jugfuldablue-dark;
+
+        h4.alert-heading, a.close {
+            color: @jugfuldablue-dark;
+        }
     }
 }
 
@@ -166,24 +185,6 @@ footer {
                     }
                 }
             }
-        }
-    }
-
-    .accordion-inner ul {
-        background: @clouds;
-    }
-
-    a.accordion-toggle {
-        color: @jugfuldablue-dark !important;
-
-        &:hover {
-            color: @whitesmoke;
-            background: @jugfuldablue !important;
-        }
-
-        &:focus, &:active, .active {
-            color: @smoke !important;
-            background: @jugfuldablue-dark !important;
         }
     }
 }
