@@ -147,6 +147,8 @@ $doc->addScript($tpath.'/js/modernizr-2.8.2.min.js');
         <jdoc:include type="modules" name="nav" />
     </nav>
 
+    <div class="wrapper-layout">
+
     <?php if ($this->countModules('slideshow')): ?>
         <section class="rslides_container hide-on-mobile" role="complementary">
             <jdoc:include type="modules" name="slideshow" />
@@ -198,9 +200,7 @@ $doc->addScript($tpath.'/js/modernizr-2.8.2.min.js');
                     <ul>
                         <li><a href="https://www.facebook.com/jugfulda/" target="_blank" title="Joomla! User Group Fulda bei facebook"><span class="icon-facebook-sign"></span><p hidden>facebook</p></a></li>
                         <li><a href="https://www.flickr.com/photos/jugfulda/" target="_blank" title="Joomla! User Group Fulda bei flickr"><span class="icon-flickr"></span><p hidden>flickr</p></a></li>
-                        <!--
                         <li><a href="href="?format=feed&amp;type=rss"" target="_blank" title="Abonniere die RSS Feeds der JUG Fulda"><span class="icon-rss"></span><p hidden>rss</p></a></li>
-                        -->
                         <li><a href="https://twitter.com/jugfulda/" target="_blank" title="Folge uns auf twitter"><span class="icon-twitter"></span><p hidden>twitter</p></a></li>
                     </ul>
                 </div>
@@ -214,6 +214,8 @@ $doc->addScript($tpath.'/js/modernizr-2.8.2.min.js');
             <jdoc:include type="modules" name="bottom_row" style="jduo" />
         </section>
     <?php endif; ?>
+
+    </div>
 
     <?php if ($this->countModules('footer')): ?>
         <footer role="contentinfo">

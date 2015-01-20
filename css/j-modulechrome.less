@@ -97,22 +97,39 @@
 
         .module-body {
             padding: 0;
+			background: @whitesmoke;
             border: 0;
 
-            form {
+			&:before {
+				color: @jugfuldablue-dark;
+				display: inline-block;
+				position: absolute;
+				right: 1em;
+				top: .25em;
+				font-family: FontAwesome;
+				font-style: normal;
+				font-weight: normal;
+				font-size: 1.5em;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+				content: "\f002";
+			}
+
+			form {
                 margin: 0;
 
                 input {
                     width: 100%;
                     height: 3em;
                     margin: 0;
-                    // border: 0;
                     color: @jugfuldablue-dark;
-                    background: @whitesmoke;
+                    background: @smoke;
+					border: 1px solid @gainsboro;
 
                     &:focus {
-                        color: @smoke;
-                        background: @jugfuldablue;
+                        color: @jugfuldablue-darker;
+                        background: @whitesmoke;
+						border: 1px solid @gainsboro-dark;
                     }
                 }
             }
